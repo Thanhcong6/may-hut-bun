@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cơ khí Trí Hiếu - chuyên sản xuất máy hút bùn</title>
+    <style>
+        :root {
+            --primary-color: #0078d4;
+            --dark-color: #333;
+            --light-bg: #f4f4f4;
+            --success-color: #28a745;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(rgba(0,120,212,0.8), rgba(0,120,212,0.8));
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        /* Bố cục chia cột chính */
+        .main-layout {
+            display: flex;
+            max-width: 1400px;
+            margin: auto;
+            gap: 20px;
+            padding: 20px;
+        }
+        /* Cột bên trái */
+        .content-left {
+            flex: 3;
+        }
+        /* Cột bên phải */
+        .sidebar-right {
+            flex: 1;
+            min-width: 300px;
+        }
+        .section-title {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        /* Lưới hình ảnh */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        /* Video cột dọc */
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .video-item {
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            /* Sửa lại CSS một chút để iframe hiển thị gọn gàng */
+            display: flex; 
+        }
+        iframe {
+            border: none;
+            width: 100%;
+        }
+        /* Phần bình luận */
+        .comment-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .comment-form input, .comment-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .comment-form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .comment-list {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+        .comment-item {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .comment-item strong { color: var(--primary-color); }
+        .comment-item small { color: #888; display: block; }
+
+        /* Thống kê truy cập */
+        .stats-bar {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid #ddd;
+            font-weight: bold;
+        }
+        .stat-item span { color: var(--primary-color); font-size: 1.2rem; }
+
+        .contact-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+            border: 2px solid var(--primary-color);
+        }
+        .cta-button {
+            background-color: var(--success-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        @media (max-width: 900px) {
+            .main-layout { flex-direction: column; }
+            .sidebar-right { min-width: 100%; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cơ khí Trí Hiếu - chuyên sản xuất máy hút bùn</h1>
+    <p>Giải pháp kỹ thuật chuyên nghiệp - Vĩnh Long</p>
+    <p style="font-size: 1rem; background: rgba(0,0,0,0.2); display: inline-block; padding: 5px 15px; border-radius: 20px;">
+        📍 Địa chỉ: Số 484, tổ 33, ấp Phú Hữu Đông, xã Song Phú, Vĩnh Long
+    </p>
+</header>
+
+<div class="main-layout">
+    <div class="content-left">
+        <h2 class="section-title">Hình ảnh thiết bị thi công</h2>
+        <div class="gallery">
+            <div class="gallery-item"><img src="1.jpg" alt="Ảnh 1"><p style="text-align:center">Ảnh 1</p></div>
+            <div class="gallery-item"><img src="2.jpg" alt="Ảnh 2"><p style="text-align:center">Ảnh 2</p></div>
+            <div class="gallery-item"><img src="3.jpg" alt="Ảnh 3"><p style="text-align:center">Ảnh 3</p></div>
+            <div class="gallery-item"><img src="4.jpg" alt="Ảnh 4"><p style="text-align:center">Ảnh 4</p></div>
+            <div class="gallery-item"><img src="5.jpg" alt="Ảnh 5"><p style="text-align:center">Ảnh 5</p></div>
+            <div class="gallery-item"><img src="6.jpg" alt="Ảnh 6"><p style="text-align:center">Ảnh 6</p></div>
+            <div class="gallery-item"><img src="7.jpg" alt="Ảnh 7"><p style="text-align:center">Ảnh 7</p></div>
+            <div class="gallery-item"><img src="8.jpg" alt="Ảnh 8"><p style="text-align:center">Ảnh 8</p></div>
+            <div class="gallery-item"><img src="9.jpg" alt="Ảnh 9"><p style="text-align:center">Ảnh 9</p></div>
+            <div class="gallery-item"><img src="10.jpg" alt="Ảnh 10"><p style="text-align:center">Ảnh 10</p></div>
+   		    <div class="gallery-item"><img src="11.jpg" alt="Ảnh 11"><p style="text-align:center">Ảnh 11</p></div>
+  		    <div class="gallery-item"><img src="12.jpg" alt="Ảnh 12"><p style="text-align:center">Ảnh 12</p></div>
+  		    <div class="gallery-item"><img src="13.jpg" alt="Ảnh 13"><p style="text-align:center">Ảnh 13</p></div>
+  		    <div class="gallery-item"><img src="14.jpg" alt="Ảnh 14"><p style="text-align:center">Ảnh 14</p></div>
+  		    <div class="gallery-item"><img src="15.jpg" alt="Ảnh 15"><p style="text-align:center">Ảnh 15</p></div>
+ 		    <div class="gallery-item"><img src="16.jpg" alt="Ảnh 16"><p style="text-align:center">Ảnh 16</p></div>
+		    <div class="gallery-item"><img src="17.jpg" alt="Ảnh 17"><p style="text-align:center">Ảnh 17</p></div>
+        </div>
+
+        <div class="comment-section">
+            <h3 class="section-title">Bình luận & Góp ý</h3>
+            <div class="comment-form">
+                <input type="text" id="comment-name" placeholder="Tên của bạn..." required>
+                <textarea id="comment-text" rows="3" placeholder="Nội dung bình luận..." required></textarea>
+                <button onclick="addComment()">Gửi bình luận</button>
+            </div>
+            <div id="comment-list" class="comment-list">
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">Đang trực tuyến: <span id="online-count">--</span></div>
+            |
+            <div class="stat-item">Tổng lượt truy cập: <span id="total-hits">--</span></div>
+        </div>
+
+        <div class="contact-box">
+            <h3>Liên hệ tư vấn và hỗ trợ</h3>
+            <p>Liên hệ: <strong>Hiếu</strong></p>
+            <p>Số điện thoại: <strong>0988 405 506</strong></p>
+            <p>Email: <a href="mailto:giotnuocphongtran@gmail.com" style="color:var(--primary-color)">giotnuocphongtran@gmail.com</a></p>
+   	        <p>Địa chỉ: Số 484, tổ 33, ấp Phú Hữu Đông, xã Song Phú, tỉnh Vĩnh Long</p>
+            <a href="tel:0988405506" class="cta-button">GỌI NGAY</a>
+        </div>
+    </div>
+
+    <div class="sidebar-right">
+        <h2 class="section-title">Video vận hành</h2>
+        <div class="video-list">
+            <div class="video-item"><iframe height="315" src="https://www.youtube.com/embed/VtPZ4O-OSS0" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="315" src="https://www.youtube.com/embed/LnaHYXBypgc" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="315" src="https://www.youtube.com/embed/Hp2uIwurng0" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="315" src="https://www.youtube.com/embed/_WDoLcb3h3M" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="315" src="https://www.youtube.com/embed/lYk4tw9BBa0" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="315" src="https://www.youtube.com/embed/YyuWuVOHf6g" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="250" src="https://www.youtube.com/embed/HhkpyC8Q4fE" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="250" src="https://www.youtube.com/embed/1aOYXUUO-PM" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="250" src="https://www.youtube.com/embed/tOLS8drJIhE" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="250" src="https://www.youtube.com/embed/_O1JRJl-OZQ" allowfullscreen></iframe></div>
+            <div class="video-item"><iframe height="250" src="https://www.youtube.com/embed/LVgHjyjxxmw" allowfullscreen></iframe></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Cơ Khí Trí Hiếu - Vĩnh Long</p>
+    <p>Địa chỉ: Số 484, tổ 33, ấp Phú Hữu Đông, xã Song Phú, tỉnh Vĩnh Long</p>
+</footer>
+
+<script>
+    // XỬ LÝ BÌNH LUẬN
+    function loadComments() {
+        const comments = JSON.parse(localStorage.getItem('trihieu_comments')) || [];
+        const list = document.getElementById('comment-list');
+        list.innerHTML = comments.length === 0 ? '<p>Chưa có bình luận nào.</p>' : '';
+        comments.reverse().forEach(c => {
+            const div = document.createElement('div');
+            div.className = 'comment-item';
+            div.innerHTML = `<strong>${c.name}</strong> <small>${c.date}</small> <p>${c.text}</p>`;
+            list.appendChild(div);
+        });
+    }
+
+    function addComment() {
+        const name = document.getElementById('comment-name').value;
+        const text = document.getElementById('comment-text').value;
+        if (!name || !text) return alert("Vui lòng nhập đầy đủ thông tin");
+
+        const comments = JSON.parse(localStorage.getItem('trihieu_comments')) || [];
+        const newComment = {
+            name: name,
+            text: text,
+            date: new Date().toLocaleString('vi-VN')
+        };
+        comments.push(newComment);
+        localStorage.setItem('trihieu_comments', JSON.stringify(comments));
+        
+        document.getElementById('comment-name').value = '';
+        document.getElementById('comment-text').value = '';
+        loadComments();
+    }
+
+    // XỬ LÝ THỐNG KÊ (GIẢ LẬP)
+    function updateStats() {
+        // Tổng truy cập: lưu trong localStorage
+        let hits = localStorage.getItem('total_hits') || 1250; // Khởi tạo con số ban đầu
+        hits = parseInt(hits) + 1;
+        localStorage.setItem('total_hits', hits);
+        document.getElementById('total-hits').innerText = hits.toLocaleString();
+
+        // Đang trực tuyến: ngẫu nhiên từ 3-12 người cho sinh động
+        const online = Math.floor(Math.random() * 10) + 3;
+        document.getElementById('online-count').innerText = online;
+    }
+
+    window.onload = function() {
+        loadComments();
+        updateStats();
+    }
+</script>
+
+</body>
+</html>
