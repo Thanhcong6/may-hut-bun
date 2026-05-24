@@ -131,6 +131,7 @@
             margin-top: 20px;
             display: flex;
             justify-content: space-around;
+            align-items: center;
             border: 1px solid #ddd;
             font-weight: bold;
         }
@@ -192,13 +193,13 @@
             <div class="gallery-item"><img src="8.jpg" alt="Ảnh 8"><p style="text-align:center">Ảnh 8</p></div>
             <div class="gallery-item"><img src="9.jpg" alt="Ảnh 9"><p style="text-align:center">Ảnh 9</p></div>
             <div class="gallery-item"><img src="10.jpg" alt="Ảnh 10"><p style="text-align:center">Ảnh 10</p></div>
-   		    <div class="gallery-item"><img src="11.jpg" alt="Ảnh 11"><p style="text-align:center">Ảnh 11</p></div>
-  		    <div class="gallery-item"><img src="12.jpg" alt="Ảnh 12"><p style="text-align:center">Ảnh 12</p></div>
-  		    <div class="gallery-item"><img src="13.jpg" alt="Ảnh 13"><p style="text-align:center">Ảnh 13</p></div>
-  		    <div class="gallery-item"><img src="14.jpg" alt="Ảnh 14"><p style="text-align:center">Ảnh 14</p></div>
-  		    <div class="gallery-item"><img src="15.jpg" alt="Ảnh 15"><p style="text-align:center">Ảnh 15</p></div>
- 		    <div class="gallery-item"><img src="16.jpg" alt="Ảnh 16"><p style="text-align:center">Ảnh 16</p></div>
-		    <div class="gallery-item"><img src="17.jpg" alt="Ảnh 17"><p style="text-align:center">Ảnh 17</p></div>
+            <div class="gallery-item"><img src="11.jpg" alt="Ảnh 11"><p style="text-align:center">Ảnh 11</p></div>
+            <div class="gallery-item"><img src="12.jpg" alt="Ảnh 12"><p style="text-align:center">Ảnh 12</p></div>
+            <div class="gallery-item"><img src="13.jpg" alt="Ảnh 13"><p style="text-align:center">Ảnh 13</p></div>
+            <div class="gallery-item"><img src="14.jpg" alt="Ảnh 14"><p style="text-align:center">Ảnh 14</p></div>
+            <div class="gallery-item"><img src="15.jpg" alt="Ảnh 15"><p style="text-align:center">Ảnh 15</p></div>
+            <div class="gallery-item"><img src="16.jpg" alt="Ảnh 16"><p style="text-align:center">Ảnh 16</p></div>
+            <div class="gallery-item"><img src="17.jpg" alt="Ảnh 17"><p style="text-align:center">Ảnh 17</p></div>
         </div>
 
         <div class="comment-section">
@@ -212,10 +213,15 @@
             </div>
         </div>
 
+        <!-- Thanh thống kê tự động kết nối dữ liệu thật qua FreeVisitorCounters -->
         <div class="stats-bar">
-            <div class="stat-item">Đang trực tuyến: <span id="online-count">--</span></div>
-            |
-            <div class="stat-item">Tổng lượt truy cập: <span id="total-hits">--</span></div>
+            <div class="stat-item">
+                <span style="color: #2ecc71; margin-right: 5px;">●</span> 
+                Dữ liệu truy cập thực tế:
+            </div>
+            <div class="stat-item">
+                <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1200035/t/0"></script>
+            </div>
         </div>
 
         <div class="contact-box">
@@ -223,7 +229,7 @@
             <p>Liên hệ: <strong>Hiếu</strong></p>
             <p>Số điện thoại: <strong>0988 405 506</strong></p>
             <p>Email: <a href="mailto:giotnuocphongtran@gmail.com" style="color:var(--primary-color)">giotnuocphongtran@gmail.com</a></p>
-   	        <p>Địa chỉ: Số 484, tổ 33, ấp Phú Hữu Đông, xã Song Phú, tỉnh Vĩnh Long</p>
+            <p>Địa chỉ: Số 484, tổ 33, ấp Phú Hữu Đông, xã Song Phú, tỉnh Vĩnh Long</p>
             <a href="tel:0988405506" class="cta-button">GỌI NGAY</a>
         </div>
     </div>
@@ -284,22 +290,8 @@
         loadComments();
     }
 
-    // XỬ LÝ THỐNG KÊ (GIẢ LẬP)
-    function updateStats() {
-        // Tổng truy cập: lưu trong localStorage
-        let hits = localStorage.getItem('total_hits') || 1250; // Khởi tạo con số ban đầu
-        hits = parseInt(hits) + 1;
-        localStorage.setItem('total_hits', hits);
-        document.getElementById('total-hits').innerText = hits.toLocaleString();
-
-        // Đang trực tuyến: ngẫu nhiên từ 3-12 người cho sinh động
-        const online = Math.floor(Math.random() * 10) + 3;
-        document.getElementById('online-count').innerText = online;
-    }
-
     window.onload = function() {
         loadComments();
-        updateStats();
     }
 </script>
 
